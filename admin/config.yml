@@ -6,7 +6,7 @@ public_folder: "/notice"
 collections:
   - name: "notices"
     label: "Notices"
-    folder: "notices"
+    folder: "notice"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:

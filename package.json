@@ -2,7 +2,7 @@
   "name": "Reliable Tutorials",
   "version": "1.0.0",
   "description": "Reliable Tutorials by Jovin Rodrigues",
-  "main": "index.html",
+  "main": ".eleventy.js",
   "scripts": {
     "start": "eleventy --serve",
     "build": "eleventy"

@@ -1,0 +1,69 @@
+.numbers_outer
+    background: $primary
+    display: flex
+    flex-direction: column
+    align-items: center
+    text-align: center
+    padding-bottom: 5rem
+    position: relative
+
+.numbers_grid
+    position: absolute
+    top: 12rem
+    left: 0
+    right: 0
+    max-width: 630px
+    margin: 0 auto
+    display: grid
+    grid-template-columns: repeat(2,1fr)
+    justify-items: center
+    align-items: center
+    align-content: center
+    justify-content: center
+
+.numbers_title
+    color: $light
+
+.number
+    // cursor: pointer
+    background: $light
+    display: flex
+    flex-direction: column
+    align-items: center
+    padding: 1.5em 1em
+    width: 270px
+    @extend .box-shadow
+    @extend .border-radius
+
+.number_number
+    font-size: 5rem
+    font-style: 400px
+
+.number_desc
+    font-size: 1rem
+    text-transform: uppercase
+    font-weight: 900
+
+@media screen and ( min-width: 900px )
+    .numbers_title_break
+        content: ''
+
+@media screen and ( max-width:  900px)
+    .numbers_grid
+        top: 14rem
+    .number_number
+        font-size: 3rem
+    .number
+        width: 80%
+
+@media screen and ( max-width: 470px )
+    .numbers_grid
+        top: 8rem
+    .number_number
+        font-size: 2.8rem
+    .number_desc
+        font-size: 0.9rem
+
+@media screen and ( max-width: 400px )
+    .numbers_grid
+        top: 8rem

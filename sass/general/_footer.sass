@@ -1,0 +1,33 @@
+.footer_outer
+    margin-top: 7rem
+    background: $primary
+    color: $light
+    padding: 1em 0
+
+.footer
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+
+.gavinpereira
+    display: flex
+    flex-direction: row
+    align-items: center
+    gap: 0.3em
+    color: $light
+    img
+        height: 17px
+    &:hover span
+        text-decoration: underline
+    &:focus
+        outline-color: white
+
+@media screen and ( max-width: 900px )
+    .footer_outer
+        margin-top: 3rem
+    .footer
+        flex-direction: column
+        gap: 0.8em
+    .copyright
+        text-align: center

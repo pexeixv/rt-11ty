@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reliable Tutorials</title>
+    <meta property="og:title" content="Reliable Tutorials">
+    <meta property="og:url" content="https://www.reliabletutorials.com">
+    <meta property="og:description"
+        content="Mathematics tutoring service by Jovino Rodrigues for Goa Board HSSC & GCET, in Vasco-da-Gama, Goa.">
+    <meta name="description"
+        content="Mathematics tutoring service by Jovino Rodrigues for Goa Board HSSC & GCET, in Vasco-da-Gama, Goa.">
+    <meta property="og:image" content="https://reliabletutorials.com/img/images/hero-preview.jpg">
+    <meta property="og:type" content="website">
+
+    <link rel="shortcut icon" href="img/fav/fav-min.png" type="image/x-icon">
+    <link rel="stylesheet" href="sass/home.css">
+
+</head>
+
+<body>
+
+    <!-- 
+
+            This website is
+            Designed, Developed and Deployed
+            by Gavin Pereira.
+
+            View my other work
+            gavinpereira.in
+
+            Contact me
+            gavinpereira.in/contact
+
+    -->
+
+
+    <noscript>
+        <div>
+            <h3>THIS WEBSITE REQUIRES JAVASCRIPT TO WORK</h3>
+            <p>Learn how to <a href="//enablejavascript.io" target="_blank">Enable JavaScript</a></p>
+        </div>
+    </noscript>
+
+
+
+    <!-- Landing Area Starts -->
+    <section class="landing_outer outer">
+        <div class="landing landing_inner inner">
+            <header class="landing_header header">
+                <!-- <a href="#" class="header_logo_anchor">
+                    <img src="img/fav/fav.svg" alt="Reliable Tutorials Logo" class="header_logo">
+                </a>
+            <span class="header_name">Reliable Tutorials</span> -->
+            </header>
+            <div class="landing_main">
+                <div class="landing_text">
+                    <h1 class="landing_title">Reliable <br> Tutorials</h1>
+                    <h2 class="landing_subtitle">by Jovino Rodrigues</h2>
+                    <p class="landing_desc">
+                        Mathematics tuitions for HSSC & GCET in Vasco.
+                    </p>
+                    <a class="landing_cta cta btn" onclick="document.querySelector('.numbers').scrollIntoView()">
+                        <span class="cta_title">Explore</span>
+                        <img src="img/icons/chevron.svg" class="cta_icon">
+                    </a>
+                </div>
+                <div class="landing_hero hero">
+                    <img src="img/images/hero.png" alt="" class="hero_image">
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+    <!--Landing Area Ends -->
+
+
+
+    <!-- Numbers Section Starts -->
+
+    <section class="numbers_outer outer">
+        <div class="numbers numbers_inner inner">
+            <h2 class="numbers_title section_title">
+                The numbers speak<br class="numbers_title_break"> for themselves
+            </h2>
+            <div class="numbers_grid">
+
+                {% for number in numbers %}
+                <div class="number">
+                    <h4 class="number_number counter" data-target="{{number.end}}">
+                        {{number.start}}
+                    </h4>
+                    <p class="number_desc">{{number.desc1}}<br>{{number.desc2}}</p>
+                </div>
+                {% endfor %}
+                
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Numbers Section Ends -->
+
+
+    <!-- Notices Section Starts -->
+        <section class="notices_outer outer">
+    {% if collections.notice | length %}
+            <div class=" notices notices_inner inner">
+                <h2 class="notices_title section_title">Take note</h2>
+                <div class="notices_grid">
+
+
+                    {% for notice in collections.notice %}
+                        <div class="notice">
+                            <span class="notice_date">{{ notice.data.date | postDate }}</span>
+                            <h4 class="notice_title">{{notice.data.title}}</h4>
+                            <p class="notice_desc">{{notice.data.body}}</p>
+                        </div>
+                    {% endfor %}
+
+                </div>
+            </div>
+    {% endif %}
+        </section>
+    <!-- Notices Section Starts -->
+
+
+    <!-- About Section Starts -->
+
+    <section class="about_outer outer">
+        <div class="about about_inner inner">
+            <h2 class="about_title section_title">
+                About Reliable Tutorials
+            </h2>
+            <div class="about_main">
+                <div class="about_text">
+                    <p class="about_para">Volutpat lorem turpis maecenas proin tortor eros. Nulla nulla lacinia quam
+                        nisl, mattis. Arcu dui mauris purus auctor nisl, egestas sit ornare. Amet et nisl, eu lorem.
+                        Molestie leo tellus dolor ultrices phasellus sit arcu quam arcu. Phasellus velit integer ac,
+                        rhoncus mus etiam eleifend. Porttitor orci, commodo neque tellus ultricies</p>
+                    <p class="about_para">Ac, faucibus amet et sed. Sem aliquam sed bibendum malesuada sit. Ultrices
+                        posuere quam sit cursus. Diam diam ornare accumsan eu, pulvinar diam a consequat gravida. In
+                        enim, donec a, neque odio accumsan volutpat nunc, porta. Interdum ullamcorper in nisl accumsan,
+                        at. Dictum posuere et praesent amet.</p>
+                </div>
+                <div class="about_image"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section Ends -->
+
+
+
+
+
+    <!-- Testimonials Section Starts -->
+
+    <section class="testimonials_outer outer">
+        <div class="testimonials testimonials_inner inner">
+            <h2 class="testimonials_title section_title">Here’s what my <br class="testimonials_title_break">ex-students
+                say</h2>
+            <div class="testimonials_grid">
+
+                {% for testi in testimonials %}
+                    <div class="testimonial">
+                <div class="testimonial_image">
+                    <img src="{{testi.image}}" alt="{{testi.name}}" loading="lazy">
+                </div>
+                <p class="testimonial_quote">
+                    <img src="img/icons/quotes.svg" class="testimonial_icon testimonial_icon-open" loading="lazy">
+                        {{testi.quote}}
+                    <img src="img/icons/quotes.svg" class="testimonial_icon testimonial_icon-close" loading="lazy">
+                </p>
+                <h5 class="testimonial_name">{{testi.name}}</h5>
+                <span class="testimonial_designation">{{testi.desg}}</span>
+            </div>
+                {% endfor %}
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section Ends -->
+
+    <section class="contact_outer outer">
+        <div class="contact contact_inner inner">
+            <h2 class="contact_title section_title" data-scroll>
+                Get in touch
+            </h2>
+            <div class="contact_main">
+                <div class="contact_map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3846.6281720175907!2d73.82207341538677!3d15.396610861199324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbfc79624110519%3A0x6773b673c544e020!2sReliable%20Tutorials!5e0!3m2!1sen!2sin!4v1627357397220!5m2!1sen!2sin"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                <div class="contact_content">
+                    <div class="contact_details">
+                        <a href="tel:919822384950" class="contact_detail contact_detail-phone">
+                            <img src="img/icons/phone.svg" class="contact_icon">
+                            <span>+91 9822384950</span>
+                        </a>
+                        <a href="mailto:contact@reliabletutorials.com" class="contact_detail contact_detail-email">
+                            <img src="img/icons/email.svg" class="contact_icon">
+                            <span>contact@reliabletutorials.com</span>
+                        </a>
+                        <a href="https://goo.gl/maps/yN6fpMDmR3aP6h9Q8" class="contact_detail contact_detail-address"
+                            target="_blank">
+                            <img src="img/icons/location.svg" class="contact_icon">
+                            <p>Flat #3
+                                <br>Chase Enclave
+                                <br>Vasco-da-Gama
+                                <br>GOA 403802
+                            </p>
+                        </a>
+                    </div>
+                    <div class="contact_form">
+
+                        <form action="https://formsubmit.co/155510c7a8ed24e51de1a563a367a570" method="POST">
+                            <div class="form_row">
+                                <input type="text" name="Name" id="form_name" placeholder="Name" required="required">
+                                <input type="email" name="email" id="form_email" placeholder="Email ID"
+                                    required="required">
+                            </div>
+                            <textarea type="text" name="Message" id="form_message" placeholder="Message"
+                                required="required"></textarea>
+                            <input type="hidden" name="_next" value="//reliabletutorials.com/thanks">
+                            <input type="text" name="_honey" style="display:none">
+                            <input type="hidden" name="_template" value="table">
+                            <input type="hidden" name="_subject" value="New message at ReliableTutorials.com!">
+                            <!-- <input type="hidden" name="_autoresponse"
+                                value="Your message  was successfully sent to ReliableTutorials! We will get in touch "> -->
+                            <input type="hidden" name="_captcha" value="false">
+
+                            <button type="submit" class="contact_submit btn">
+                                <span class="btn_title">Send</span>
+                                <img src="img/icons/chevron.svg" class="btn_icon">
+                            </button>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="footer_outer outer">
+        <footer class="footer footer_inner inner">
+            <span class="copyright">
+                &copy; Copyright {% year %} - Reliable Tutorials.
+            </span>
+            <a class="gavinpereira" href="//gavinpereira.in" target="_blank">
+                <img src="img/icons/code.svg" alt="Developed">
+                &nbsp;by&nbsp;
+                <span>Gavin&nbsp;Pereira</span>
+            </a>
+        </footer>
+    </section>
+
+    <script type="module" src="js/index.js" defer></script>
+
+
+</body>
+
+</html>

@@ -3,6 +3,7 @@ backend:
   branch: main
 media_folder: "public/notice/assets"
 public_folder: "/notice"
+publish_mode: editorial_workflow
 collections:
   - name: "notices"
     label: "Notices"
@@ -19,3 +20,4 @@ collections:
           widget: "hidden",
           default: ["notice", "featured"],
         }
+      - { label: "Draft", name: "tags", widget: "boolean", default: true }

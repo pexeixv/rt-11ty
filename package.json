@@ -2,7 +2,7 @@
   "name": "Reliable Tutorials",
   "version": "1.0.0",
   "description": "Reliable Tutorials by Jovin Rodrigues",
-  "main": "index.html",
+  "main": ".eleventy.js",
   "scripts": {
     "start": "eleventy --serve",
     "build": "eleventy"
@@ -19,7 +19,6 @@
   },
   "homepage": "rt.gavinpereira.in",
   "devDependencies": {
-    "@11ty/eleventy": "^0.12.1",
-    "luxon": "^1.28.0"
+    "@11ty/eleventy": "^0.12.1"
   }
 }

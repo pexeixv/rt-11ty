@@ -1,9 +1,10 @@
 ---
-title: Testogram
-description: chritsmand man what else?
-date: 2021-08-14T13:40:08.697Z
+title: Diwali Vacation
+description: Diwali Vacation will be from 10 September to 30 September. Classes
+  will commence on 1 October. Stay safe and have a Happy Diwali!
+date: 2021-09-01T13:40:00.000Z
 tags:
   - notice
   - featured
-draft: true
+draft: false
 ---
